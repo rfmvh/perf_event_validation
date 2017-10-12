@@ -19,7 +19,7 @@ int perflib_event_setup(unsigned int event, int pid, int cpu)
 	pe.disabled = 1;
 	pe.exclude_kernel = 1;
 	pe.exclude_hv = 1;
-	
+
 	return perf_event_open(&pe, pid, cpu, -1, 0);
 }
 

@@ -27,13 +27,13 @@ int branches_testcode(void) {
 		: /* no inputs */
 		: "cc", "%ecx", "%eax" /* clobbered */
 	);
-    	return 0;
+	return 0;
 
 #elif defined(__arm__)
     /* Initial code contributed by sam wang linux.swang _at_ gmail.com */
 	asm(	"\teor r3,r3,r3\n"
 		"\tldr r3,=500000\n"
-	    	"test_loop:\n"
+		"test_loop:\n"
 		"\tB test_jmp\n"
 		"\tnop\n"
 		"test_jmp:\n"
@@ -80,7 +80,7 @@ int branches_testcode(void) {
 	asm(	"\txor	3,3,3\n"
 		"\tlis	3,500000@ha\n"
 		"\taddi	3,3,500000@l\n"
-	    	"test_loop:\n"
+		"test_loop:\n"
 		"\tb	test_jmp\n"
 		"\tnop\n"
 		"test_jmp:\n"
